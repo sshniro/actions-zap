@@ -14,6 +14,9 @@ import copy
 # print(f"::set-output name=myOutput::{my_output}")
 # Actions test code ends here
 
+GITHUB_WORKSPACE = os.environ['GITHUB_WORKSPACE']
+print('workspace is' + GITHUB_WORKSPACE)
+
 GITHUB_TOKEN = os.environ['INPUT_GITHUB_TOKEN']
 GITHUB_REPOSITORY = os.environ['GITHUB_REPOSITORY']
 
@@ -33,7 +36,7 @@ updated_alerts_copy = []
 existing_alerts = []
 
 g_config_file_dir = '.zap/'
-yaml_file_name = os.environ['YAML_FILE_NAME']
+yaml_file_name = os.environ['INPUT_ZAP_FILE_NAME']
 working_branch = os.environ['WORKING_BRANCH']
 
 create_new_issue = False

@@ -12,9 +12,8 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          who-to-greet: 'Nirojan'
-          myInput: 'Nirojan via input'
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          ZAP_FILE_NAME: 'test hello world'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
