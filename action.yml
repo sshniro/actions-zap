@@ -21,6 +21,6 @@ outputs:
     description: 'The process has been completed'
 runs:
   using: 'node12'
-  image: 'dist/index.js'
+  main: 'index.js'
   args:
     - ${{ inputs.who-to-greet }}
