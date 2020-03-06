@@ -2,7 +2,7 @@
 
 ls
 # Runs the ZAP Baseline scan
-zap-baseline.py  -t https://www.example.com -g gen.conf -J report_json.json -B /zap/wrk/
+docker run -v $(pwd):/zap/wrk/:rw  -t owasp/zap2docker-stable zap-baseline.py  -t https://www.example.com -g gen.conf -J report_json.json -B /zap/wrk/
 # listing all the variables
 pwd && ls -l /zap/wrk/
 # Post process the generated report and create issues
