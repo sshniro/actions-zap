@@ -20,7 +20,7 @@ outputs:
   time: # id of output
     description: 'The process has been completed'
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node12'
+  image: 'dist/index.js'
   args:
     - ${{ inputs.who-to-greet }}
