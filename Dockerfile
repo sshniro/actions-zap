@@ -8,10 +8,11 @@ RUN pip install --upgrade pip PyGithub pyyaml deepdiff
 #
 ## Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh
+COPY custom.py /zap/wrk/custom.py
 #
 #USER zap
 
-RUN zap-baseline.py -t https://www.example.com
+#RUN zap-baseline.py -t https://www.example.com
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 ENTRYPOINT ["/entrypoint.sh"]
