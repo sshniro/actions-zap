@@ -87,8 +87,8 @@ USER zap
 HEALTHCHECK --retries=5 --interval=5s CMD zap-cli status
 
 #### Official Docker ends here
-pip install --upgrade pip PyGithub pyyaml deepdiff
-pip3 install --upgrade pip PyGithub pyyaml deepdiff
+RUN pip install --upgrade pip PyGithub pyyaml deepdiff
+RUN pip3 install --upgrade pip PyGithub pyyaml deepdiff
 
 USER root
 
