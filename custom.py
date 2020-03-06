@@ -8,13 +8,13 @@ from deepdiff import DeepDiff
 import copy
 
 # Actions test Code
-my_input = os.environ["INPUT_MYINPUT"]
-print('got the variabel' + my_input)
-my_output = f"Hello {my_input}"
-print(f"::set-output name=myOutput::{my_output}")
+# my_input = os.environ["INPUT_MYINPUT"]
+# print('got the variabel' + my_input)
+# my_output = f"Hello {my_input}"
+# print(f"::set-output name=myOutput::{my_output}")
 # Actions test code ends here
 
-GITHUB_TOKEN = os.environ['GITHUB_TOKEN']
+GITHUB_TOKEN = os.environ['INPUT_GITHUB_TOKEN']
 GITHUB_REPOSITORY = os.environ['GITHUB_REPOSITORY']
 
 print('github token is' + GITHUB_TOKEN)
@@ -47,6 +47,8 @@ g = Github(GITHUB_TOKEN)
 repo = g.get_repo(GITHUB_REPOSITORY)
 issue = ''
 
+print ('All checks have passed')
+exit(0)
 
 def g_load_zap_yaml_file():
     try:
