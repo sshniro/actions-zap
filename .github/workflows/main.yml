@@ -13,8 +13,9 @@ jobs:
         id: hello
         with:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-          ZAP_FILE_NAME: 'test hello world'
+          ZAP_FILE_NAME: 'zap.yaml'
           WORKING_BRANCH: 'master'
+          DOCKER_FILE: 'sshniro/zap_action:latest'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"

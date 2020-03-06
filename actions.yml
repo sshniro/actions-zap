@@ -12,6 +12,10 @@ inputs:
     description: "Input to use"
     required: true
     default: master
+  DOCKER_FILE:
+    description: "Input to use"
+    required: true
+    default: sshniro/zap_action:latest
 outputs:
   time: # id of output
     description: 'The process has been completed'
