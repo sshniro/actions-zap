@@ -1,9 +1,12 @@
 #!/bin/sh -l
 
 ls
-python3 /zap/wrk/custom.py
-zap-baseline.py  -t https://www.example.com -g gen.conf -J testreport.html -B /zap/wrk/
+# Runs the ZAP Baseline scan
+zap-baseline.py  -t https://www.example.com -g gen.conf -J report_json.json -B /zap/wrk/
+# listing all the variables
 pwd && ls -l /zap/wrk/
+# Post process the generated report and create issues
+python3 /zap/wrk/custom.py
 
 echo "Hello $1"
 time=$(date)

@@ -37,7 +37,7 @@ existing_alerts = []
 
 g_config_file_dir = '.zap/'
 yaml_file_name = os.environ['INPUT_ZAP_FILE_NAME']
-working_branch = os.environ['WORKING_BRANCH']
+working_branch = os.environ['INPUT_WORKING_BRANCH']
 
 create_new_issue = False
 NXT_LINE = '\n'
