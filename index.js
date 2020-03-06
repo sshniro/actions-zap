@@ -1,6 +1,6 @@
 
 const core = require('@actions/core');
-import * as exec from '@actions/exec';
+const exec = require('@actions/exec');
 const wait = require('./wait');
 
 
