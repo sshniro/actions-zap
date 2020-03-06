@@ -21,4 +21,4 @@ outputs:
     description: 'The process has been completed'
 runs:
   using: 'node12'
-  main: 'index.js'
+  main: 'lib/index.js'
